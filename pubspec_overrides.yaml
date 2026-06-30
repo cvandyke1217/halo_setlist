@@ -1,0 +1,7 @@
+dependency_overrides:
+  brilliant_ble:
+    path: packages/brilliant_ble
+  brilliant_msg:
+    path: packages/brilliant_msg
+  simple_brilliant_app:
+    path: packages/simple_brilliant_app

@@ -1,0 +1,40 @@
+name: halo_setlist
+description: "Setlist & chord-chart companion app for Halo - Music Mode follows the chart via live audio chord detection."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  logging: ^1.2.0
+  path_provider: ^2.1.4
+  record: ^6.2.1
+  fftea: ^1.5.0+1
+  simple_brilliant_app:
+    # Note: We use a path dependency because this app vendors its own copy of
+    # the library packages. In *your* app you should use a versioned
+    # dependency from pub.dev instead.
+    path: packages/simple_brilliant_app
+  brilliant_ble:
+    path: packages/brilliant_ble
+  brilliant_msg:
+    path: packages/brilliant_msg
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - packages/brilliant_msg/lua/battery.min.lua
+    - packages/brilliant_msg/lua/code.min.lua
+    - packages/brilliant_msg/lua/data.min.lua
+    - packages/brilliant_msg/lua/plain_text.min.lua
+    - assets/frame_app.lua
