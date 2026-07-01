@@ -132,33 +132,40 @@ class _PlayScreenState extends State<PlayScreen> with SimpleFrameAppState {
                     child: Padding(
                       padding: const EdgeInsets.all(20),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Column(
-                                children: [
-                                  Text(cursor.currentChord,
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Text(cursor.currentChord,
                                       style: theme.textTheme.displayLarge
                                           ?.copyWith(color: theme.colorScheme.primary)),
-                                  Text('current', style: theme.textTheme.labelMedium),
-                                ],
-                              ),
-                              const SizedBox(width: 32),
-                              Column(
-                                children: [
-                                  Text(cursor.nextChord ?? '--',
+                                ),
+                                Text('current', style: theme.textTheme.labelMedium),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Text(cursor.nextChord ?? '--',
                                       style: theme.textTheme.headlineMedium
                                           ?.copyWith(color: theme.colorScheme.secondary)),
-                                  Text('next', style: theme.textTheme.labelMedium),
-                                ],
-                              ),
-                            ],
+                                ),
+                                Text('next', style: theme.textTheme.labelMedium),
+                              ],
+                            ),
                           ),
+                          const SizedBox(width: 8),
                           Column(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               SizedBox(
                                 width: 110,
