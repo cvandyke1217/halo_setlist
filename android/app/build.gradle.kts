@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "xyz.brilliant.halo_setlist"
+    namespace = "org.vandyke.setlist"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "xyz.brilliant.halo_setlist"
+        applicationId = "org.vandyke.setlist"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

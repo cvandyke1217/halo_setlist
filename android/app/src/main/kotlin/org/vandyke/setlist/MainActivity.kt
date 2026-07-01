@@ -1,4 +1,4 @@
-package xyz.brilliant.halo_setlist
+package org.vandyke.setlist
 
 import io.flutter.embedding.android.FlutterActivity
 
